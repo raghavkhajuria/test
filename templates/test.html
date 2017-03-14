@@ -13,12 +13,25 @@
     ga('create', 'UA-37231762-1', 'auto');
     ga('send', 'pageview');
     ga(function(tracker) {
+        console.log("hi there");
       // Logs the tracker created above to the console.
       console.log(tracker);
     });
 
+    ga(function(tracker) {
+      // Logs the trackers name.
+      // (Note: default trackers are given the name "t0")
+      console.log(tracker.get('name'));
+
+      // Logs the client ID for the current user.
+      console.log(tracker.get('clientId'));
+
+      // Logs the URL of the referring site (if available).
+      console.log(tracker.get('referrer'));
+    });
+
   </script>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 </head>
