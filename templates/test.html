@@ -30,6 +30,18 @@
       console.log(tracker.get('referrer'));
     });
 
+    ga('set', {
+      page: '/about',
+      title: 'About Us'
+    });
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Video',
+      eventAction: 'play',
+      eventLabel: 'cats.mp4'
+    });
+
   </script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
